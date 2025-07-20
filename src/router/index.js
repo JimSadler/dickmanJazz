@@ -17,6 +17,30 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/AboutView.vue'),
     },
+    {
+      path: '/gallery',
+      name: 'gallery',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/GalleryView.vue'),
+    },
+    {
+      path: '/media',
+      name: 'media',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/MediaView.vue'),
+    },
+    {
+      path: '/swinging-nine',
+      name: 'swinging-nine',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/SwingingNineView.vue'),
+    },
   ],
 })
 

@@ -1,14 +1,13 @@
 import './assets/main.css'
+import 'animate.css'
 
 import { createApp } from 'vue'
-import { createPinia } from 'pinia'
-
+// Styles
 import App from './App.vue'
-import router from './router'
 
+// plugins
+import { registerPlugins } from '@/plugins/index.js'
 const app = createApp(App)
-
-app.use(createPinia())
-app.use(router)
+registerPlugins(app)
 
 app.mount('#app')
