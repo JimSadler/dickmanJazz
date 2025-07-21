@@ -1,9 +1,3 @@
-<template>
-  <button class="circular-button" :style="buttonStyle" @click="emit('click')">
-    <span>{{ text }}</span>
-  </button>
-</template>
-
 <script setup>
 import { computed } from 'vue'
 
@@ -52,7 +46,11 @@ const buttonStyle = computed(() => {
   }
 })
 </script>
-
+<template>
+  <button class="circular-button mx-2" :style="buttonStyle" @click="emit('click')">
+    <span>{{ text }}</span>
+  </button>
+</template>
 <style scoped>
 .circular-button {
   border-radius: 50%; /* Creates a perfect circle */

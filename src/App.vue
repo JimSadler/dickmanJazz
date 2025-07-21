@@ -9,7 +9,7 @@ import Footer from '@/components/utils/FooterBar.vue'
   <main>
     <RouterView style="height: 150px !important" />
   </main>
-  <Footer />
+  <!--<Footer />-->
 </template>
 
 <style>

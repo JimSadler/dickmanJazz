@@ -7,6 +7,10 @@ const theme = useTheme()
 
 const emit = defineEmits(['themeChange'])
 const drawer = shallowRef(false)
+const homeNav = {
+  text: 'Home',
+  to: '/',
+}
 const items = [
   // {
   //   text: 'Home',
@@ -79,23 +83,25 @@ function toggleTheme() {
 
       <div class="ml-3 header-text">
         <h1 :class="dynamicNavTextColor" class="text-h4">
-          <img
-            src="@/assets/tba-title.png"
-            alt="TBA Big Band Home"
-            class="mt-1"
-            style="height: 100%; width: 100%"
-          />
+          <button @click="pageNavigate(homeNav)" class="text-decoration-none">
+            <img
+              src="@/assets/tba-title.png"
+              alt="TBA Big Band Home"
+              class="mt-1"
+              style="height: 100%; width: 100%"
+            />
+          </button>
         </h1>
       </div>
-      <v-spacer></v-spacer>
-      <v-spacer></v-spacer>
-      <v-spacer></v-spacer>
-      <v-spacer></v-spacer>
-      <v-spacer></v-spacer>
-      <v-spacer></v-spacer>
-      <v-spacer></v-spacer>
-      <v-spacer></v-spacer>
-      <v-spacer></v-spacer>
+      <!--<v-spacer></v-spacer>-->
+      <!--<v-spacer></v-spacer>-->
+      <!--<v-spacer></v-spacer>-->
+      <!--<v-spacer></v-spacer>-->
+      <!--<v-spacer></v-spacer>-->
+      <!--<v-spacer></v-spacer>-->
+      <!--<v-spacer></v-spacer>-->
+      <!--<v-spacer></v-spacer>-->
+      <!--<v-spacer></v-spacer>-->
       <template v-if="$vuetify.display.mdAndUp">
         <circular-btn
           v-for="(item, i) in items"
