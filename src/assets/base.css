@@ -87,3 +87,6 @@ body {
 header.v-toolbar {
   padding: 0;
 }
+#navigation-bar {
+  display: flex;
+}

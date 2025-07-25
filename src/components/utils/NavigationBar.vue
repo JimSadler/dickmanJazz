@@ -62,7 +62,7 @@ function toggleTheme() {
 }
 </script>
 <template>
-  <v-layout class="mb-10 pb-11">
+  <v-layout class="mb-10 pb-11 d-flex">
     <v-navigation-drawer v-model="drawer" color="primary">
       <v-list nav>
         <v-list-item
@@ -76,12 +76,12 @@ function toggleTheme() {
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar class="px-md-4">
+    <v-app-bar id="navigation-bar" class="px-md-4">
       <template #prepend>
         <v-app-bar-nav-icon v-if="$vuetify.display.smAndDown" @click="drawer = !drawer" />
       </template>
 
-      <div class="ml-3 header-text">
+      <div class="ml-3 header-text d-flex justify-space-between w-100">
         <h1 :class="dynamicNavTextColor" class="text-h4">
           <button @click="pageNavigate(homeNav)" class="text-decoration-none">
             <img
@@ -93,15 +93,6 @@ function toggleTheme() {
           </button>
         </h1>
       </div>
-      <!--<v-spacer></v-spacer>-->
-      <!--<v-spacer></v-spacer>-->
-      <!--<v-spacer></v-spacer>-->
-      <!--<v-spacer></v-spacer>-->
-      <!--<v-spacer></v-spacer>-->
-      <!--<v-spacer></v-spacer>-->
-      <!--<v-spacer></v-spacer>-->
-      <!--<v-spacer></v-spacer>-->
-      <!--<v-spacer></v-spacer>-->
       <template v-if="$vuetify.display.mdAndUp">
         <circular-btn
           v-for="(item, i) in items"
@@ -114,61 +105,9 @@ function toggleTheme() {
           :background-color="item.color"
           @click="pageNavigate(item)"
         />
-        <!--<v-btn-->
-        <!--  v-for="(item, i) in items"-->
-        <!--  :key="i"-->
-        <!--  :active="i === 0"-->
-        <!--  class="me-2 text-none"-->
-        <!--  slim-->
-        <!--  v-bind="item"-->
-        <!--/>-->
-        <!--/>-->
       </template>
       <v-spacer />
-      <!--<v-tooltip-->
-      <!--  :text="`Switch to ${currentMode === 'dark' ? 'light' : 'dark'} Mode`"-->
-      <!--  location="bottom"-->
-      <!--&gt;-->
-      <!--  <template v-slot:activator="{ props }">-->
-      <!--    &lt;!&ndash;<v-btn v-bind="props">Hover Over Me</v-btn>&ndash;&gt;-->
-      <!--    <v-btn-->
-      <!--      v-bind="props"-->
-      <!--      size="large"-->
-      <!--      :icon="`${currentMode === 'dark' ? 'mdi-weather-sunny' : 'mdi-moon-waning-crescent'}`"-->
-      <!--      density="comfortable"-->
-      <!--      @click="toggleTheme"-->
-      <!--      :aria-label="switchLabel"-->
-      <!--    >-->
-      <!--    </v-btn>-->
-      <!--  </template>-->
-      <!--</v-tooltip>-->
-
-      <!--<v-switch-->
-      <!--  :value="switchLabel"-->
-      <!--  @change="toggleTheme"-->
-      <!--  :label="`toggle view mode`"-->
-      <!--&gt;</v-switch>-->
       <v-spacer />
-
-      <!--<template #append>-->
-      <!--  <v-btn-->
-      <!--    class="ms-1"-->
-      <!--    color="medium-emphasis"-->
-      <!--    icon="mdi-bell-outline"-->
-      <!--  />-->
-
-      <!--<v-btn class="ms-1" icon>-->
-      <!--  <v-avatar image="https://cdn.vuetifyjs.com/images/john.png" />-->
-
-      <!--  <v-menu activator="parent" origin="top">-->
-      <!--    <v-list>-->
-      <!--      <v-list-item link title="Update profile" />-->
-
-      <!--      <v-list-item link title="Sign out" />-->
-      <!--    </v-list>-->
-      <!--  </v-menu>-->
-      <!--</v-btn>-->
-      <!--</template>-->
     </v-app-bar>
 
     <!--<v-main height="200">-->
