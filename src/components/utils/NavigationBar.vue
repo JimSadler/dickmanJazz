@@ -43,6 +43,7 @@ const items = [
   },
 ]
 function pageNavigate(item) {
+  console.log('Navigating to:', item.to)
   // Implement navigation logic here, e.g., using Vue Router
   router.push({ path: item.to })
 }
@@ -88,26 +89,45 @@ function toggleTheme() {
               src="@/assets/tba-title.png"
               alt="TBA Big Band Home"
               class="mt-1"
-              style="height: 100%; width: 100%"
+              style="height: 50%; width: 50%"
             />
           </button>
         </h1>
       </div>
       <template v-if="$vuetify.display.mdAndUp">
-        <circular-btn
+        <v-btn
+          tile
+          color="red"
           v-for="(item, i) in items"
           :key="i"
-          :active="i === 0"
-          class="nav-btn"
-          v-bind="item"
-          :imageUrl="item.img"
-          :text-color="'red'"
-          :background-color="item.color"
+          class="mr-2"
+          rounded
+          size="large"
           @click="pageNavigate(item)"
-        />
+        >
+          <v-icon
+            color="red"
+            size="large"
+            icon="mdi-music"
+            class="mr-2"
+            v-bind="item"
+            :background-color="item.color"
+            >mdi-music
+          </v-icon>
+          {{ item.text }}
+        </v-btn>
+        <!--<circular-btn-->
+        <!--  v-for="(item, i) in items"-->
+        <!--  :key="i"-->
+        <!--  :active="i === 0"-->
+        <!--  class="nav-btn"-->
+        <!--  v-bind="item"-->
+        <!--  :imageUrl="item.img"-->
+        <!--  :text-color="'red'"-->
+        <!--  :background-color="item.color"-->
+        <!--  @click="pageNavigate(item)"-->
+        <!--/>-->
       </template>
-      <v-spacer />
-      <v-spacer />
     </v-app-bar>
 
     <!--<v-main height="200">-->
@@ -150,5 +170,8 @@ function toggleTheme() {
   font-family: Arial, sans-serif; /* Choose a font */
   font-size: 20px; /* Set the font size */
   text-align: center; /* Center text within its own space */
+}
+.tba-red {
+  color: #ff0605 !important;
 }
 </style>

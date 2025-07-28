@@ -4,6 +4,6 @@ import '@mdi/font/css/materialdesignicons.css'
 import 'vuetify/styles'
 export default createVuetify({
   theme: {
-    defaultTheme: 'dark',
+    defaultTheme: 'light',
   },
 })

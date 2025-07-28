@@ -17,7 +17,7 @@ header.v-toolbar {
   padding: 0 !important;
 }
 .v-toolbar__content {
-  height: 300px !important;
+  height: 150px !important;
   background: var(--color-background);
 }
 </style>

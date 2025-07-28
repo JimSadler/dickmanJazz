@@ -29,9 +29,9 @@ export const tbaBandGallery = [
   {
     src: 'public/band-gallery/tba-band-10.jpg',
   },
-  {
-    src: 'public/band-gallery/tba-band-11.jpg',
-  },
+  // {
+  //   src: 'public/band-gallery/tba-band-11.jpg',
+  // },
   {
     src: 'public/band-gallery/tba-band-12.jpg',
   },
