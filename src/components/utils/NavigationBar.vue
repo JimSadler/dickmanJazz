@@ -91,6 +91,12 @@ function toggleTheme() {
               class="mt-1"
               style="height: 50%; width: 50%"
             />
+            <!--<img-->
+            <!--  src="/public/TBA_logo.png"-->
+            <!--  alt="TBA Big Band Home"-->
+            <!--  class="mt-1"-->
+            <!--  style="height: 25%; width: 25%"-->
+            <!--/>-->
           </button>
         </h1>
       </div>

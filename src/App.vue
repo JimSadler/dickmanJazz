@@ -6,10 +6,10 @@ import Footer from '@/components/utils/FooterBar.vue'
 
 <template>
   <navigation />
-  <main>
+  <main class="main-content">
     <RouterView style="height: 150px !important" />
   </main>
-  <!--<Footer />-->
+  <Footer />
 </template>
 
 <style>
@@ -19,5 +19,9 @@ header.v-toolbar {
 .v-toolbar__content {
   height: 150px !important;
   background: var(--color-background);
+}
+.main-content {
+  min-height: calc(100vh - 150px);
+  padding: 0;
 }
 </style>
