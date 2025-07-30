@@ -63,7 +63,7 @@ function toggleTheme() {
 }
 </script>
 <template>
-  <v-layout class="mb-10 pb-11 d-flex">
+  <v-layout class="mb-10 pb-11 d-flex" style="min-height: 150px">
     <v-navigation-drawer v-model="drawer" color="primary">
       <v-list nav>
         <v-list-item
@@ -142,6 +142,10 @@ function toggleTheme() {
   </v-layout>
 </template>
 <style>
+.v-toolbar__content {
+  height: 150px !important;
+  background: var(--color-background);
+}
 .header-text .nassau-white {
   color: #fff;
 }

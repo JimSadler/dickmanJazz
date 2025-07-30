@@ -66,6 +66,7 @@ const icons = ref([
             />
           </v-btn>
         </v-tooltip>
+        <!--<img src="/public/river-city-logo.png" alt="" />-->
         <v-btn
           v-for="icon in icons"
           :key="icon"

@@ -5,7 +5,7 @@ import { tbaBandGallery } from '@/services/constants.service.js'
 </script>
 <template>
   <v-container class="gallery">
-    <v-row class="px-15">
+    <v-row class="">
       <v-col
         v-for="(image, i) in tbaBandGallery"
         cols="12"
@@ -14,17 +14,19 @@ import { tbaBandGallery } from '@/services/constants.service.js'
         lg="3"
         class="d-flex justify-center align-center"
       >
-        <v-img :lazy-src="image.src" :src="image.src" width="85%" cover />
+        <v-img :lazy-src="image.src" :src="image.src" width="75%" cover />
       </v-col>
     </v-row>
   </v-container>
 </template>
 
 <style lang="scss" scoped>
-.about {
-  min-height: 100vh;
+.gallery {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: stretch;
+  height: 100%;
+  overflow-y: hidden !important;
 }
 
 .v-card {
