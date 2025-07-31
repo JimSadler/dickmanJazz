@@ -195,7 +195,7 @@ const colors = Object.keys(_colors).reduce((acc, colorName) => {
 }, {})
 
 export default {
-  defaultTheme: 'light',
+  defaultTheme: 'dark',
   themes: {
     light: {
       dark: false,

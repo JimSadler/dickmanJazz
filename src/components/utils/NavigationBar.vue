@@ -63,7 +63,7 @@ function toggleTheme() {
 }
 </script>
 <template>
-  <v-layout class="mb-10 pb-11 d-flex" style="min-height: 150px">
+  <div class="mb-0n2 pb-0 d-flex" style="height: 150px">
     <v-navigation-drawer v-model="drawer" color="primary">
       <v-list nav>
         <v-list-item
@@ -139,7 +139,7 @@ function toggleTheme() {
     <!--<v-main height="200">-->
     <!--  &lt;!&ndash;  &ndash;&gt;-->
     <!--</v-main>-->
-  </v-layout>
+  </div>
 </template>
 <style>
 .v-toolbar__content {

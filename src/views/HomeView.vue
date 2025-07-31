@@ -2,7 +2,7 @@
 
 <template>
   <!--<TheWelcome />-->
-  <v-container fluid class="home1">
+  <v-container fluid class="home1 pa-0">
     <v-row class="justify-center mx-auto">
       <img
         class="bg-grey-lighten-2 home-hero"
