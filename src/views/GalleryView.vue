@@ -3,6 +3,7 @@ import { ref } from 'vue'
 
 import { tbaBandGallery } from '@/services/constants.service.js'
 import AppPage from '@/components/AppPage.vue'
+import GalleryCarouselDialog from '@/views/GalleryCarouselDialog.vue'
 </script>
 <template>
   <app-page class="media-view text-white" title="Media">
@@ -11,6 +12,11 @@ import AppPage from '@/components/AppPage.vue'
         <v-row class="pt-15">
           <v-col cols="12">
             <h1 class="text-h2 text-center">Gallery</h1>
+            <!--<img-->
+            <!--  alt-->
+            <!--  class="test"-->
+            <!--  src="https://tympanus.net/Development/HoverEffectIdeas/img/21.jpg"-->
+            <!--/>-->
           </v-col>
         </v-row>
       </v-container>
@@ -26,7 +32,7 @@ import AppPage from '@/components/AppPage.vue'
             lg="2"
             class="d-flex justify-center align-center"
           >
-            <v-img :lazy-src="image.src" :src="image.src" width="100%" cover />
+            <gallery-carousel-dialog :image="image" :index="i" />
           </v-col>
         </v-row>
       </v-container>
@@ -51,5 +57,20 @@ import AppPage from '@/components/AppPage.vue'
     height: 340px;
     width: 340px;
   }
+}
+img.test {
+  float: left;
+  width: 25%;
+  perspective: 1000px; // Helps the jump in chrome
+  backface-visibility: hidden; // Helps the jump in chrome
+  transition:
+    opacity 0.3s ease 0s,
+    transform 0.3s ease 0s;
+  transform: scale(1) rotate(0.001deg); // Deg helps the jump in FF
+}
+
+img.test:hover {
+  z-index: 10;
+  transform: scale(1.1) rotate(0.001deg);
 }
 </style>
