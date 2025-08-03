@@ -45,22 +45,22 @@ export const tbaBandGallery = [
 export const tbaAudioMedia = [
   {
     title: 'Blues for the Monk',
-    file: 'public/media/Blues_for_the_Monk.mp3',
+    file: '/media/Blues_for_the_Monk.mp3',
   },
   {
     title: 'Days of Wine and Roses',
-    file: 'public/media/Days_of_Wine_and_Roses.mp3',
+    file: '/media/Days_of_Wine_and_Roses.mp3',
   },
   {
     title: 'I Remember April',
-    file: 'public/media/I_Remember_April.mp3',
+    file: '/media/I_Remember_April.mp3',
   },
   {
     title: 'Sunny Side of the Street',
-    file: 'public/media/Sunny_Side_of_the_Street.mp3',
+    file: '/media/Sunny_Side_of_the_Street.mp3',
   },
   {
     title: 'Take the "A" Train',
-    file: 'public/media/Take_the_A_Train.mp3',
+    file: '/media/Take_the_A_Train.mp3',
   },
 ]

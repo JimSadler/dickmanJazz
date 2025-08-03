@@ -101,18 +101,15 @@ function toggleTheme() {
         </h1>
       </div>
       <template v-if="$vuetify.display.mdAndUp">
-        <v-btn
-          tile
-          color="red"
+        <router-link
           v-for="(item, i) in items"
           :key="i"
-          class="mr-2"
-          rounded
-          size="large"
-          @click="pageNavigate(item)"
+          :to="item.to"
+          class="v-btn rounded-lg v-btn--size-large v-btn--density-default"
         >
+          <!--<v-btn ref="nav_btn" tile :key="i" class="mr-2 nav-btn" rounded size="large">-->
           <v-icon
-            color="red"
+            :color="item.color"
             size="large"
             icon="mdi-music"
             class="mr-2"
@@ -121,7 +118,29 @@ function toggleTheme() {
             >mdi-music
           </v-icon>
           {{ item.text }}
-        </v-btn>
+          <!--</v-btn>-->
+        </router-link>
+        <!--<v-btn-->
+        <!--  tile-->
+        <!--  color="red"-->
+        <!--  v-for="(item, i) in items"-->
+        <!--  :key="i"-->
+        <!--  class="mr-2"-->
+        <!--  rounded-->
+        <!--  size="large"-->
+        <!--  @click="pageNavigate(item)"-->
+        <!--&gt;-->
+        <!--  <v-icon-->
+        <!--    color="red"-->
+        <!--    size="large"-->
+        <!--    icon="mdi-music"-->
+        <!--    class="mr-2"-->
+        <!--    v-bind="item"-->
+        <!--    :background-color="item.color"-->
+        <!--    >mdi-music-->
+        <!--  </v-icon>-->
+        <!--  {{ item.text }}-->
+        <!--</v-btn>-->
         <!--<circular-btn-->
         <!--  v-for="(item, i) in items"-->
         <!--  :key="i"-->
@@ -155,33 +174,17 @@ function toggleTheme() {
 .header-text .tba-red {
   color: #ff0605;
 }
-.SelectedTileactive {
-  border-radius: 4px;
-  background: rgba(10, 204, 117, 0.19);
-}
 
-.nav-btn {
-  width: 150px; /* Set the width */
-  height: 150px; /* Set the height (must be equal to width for a perfect circle) */
-  border-radius: 50%; /* Create the circular shape */
-  display: flex; /* Use flexbox for centering content */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  cursor: pointer; /* Change cursor on hover */
-}
-
-.nav-btn:hover {
-  background-color: #2c3e50; /* Darker background color on hover */
-  /* You can also change the image or adjust blend mode on hover if needed */
-}
-
-.nav-btn span {
-  color: white; /* Set the text color */
-  font-family: Arial, sans-serif; /* Choose a font */
-  font-size: 20px; /* Set the font size */
-  text-align: center; /* Center text within its own space */
-}
 .tba-red {
   color: #ff0605 !important;
+}
+#navigation-bar {
+  a {
+    color: #ff0605;
+    &.router-link-exact-active {
+      color: #41b783 !important;
+      border: 1px solid #41b783 !important;
+    }
+  }
 }
 </style>
