@@ -32,6 +32,9 @@ defineProps({
     type: Boolean,
     default: false,
   },
+  subtitle: {
+    type: String,
+  },
 })
 
 const modelValue = defineModel()
@@ -66,7 +69,14 @@ watch(
     </template>
 
     <!-- card -->
-    <app-card :id="id" close-btn v-bind="cardProps" @close="modelValue = false">
+    <app-card
+      :id="id"
+      close-btn
+      v-bind="cardProps"
+      :title="title"
+      :subtitle="subtitle"
+      @close="modelValue = false"
+    >
       <!-- banner -->
       <template v-if="$slots.banner" #banner>
         <slot name="banner" />

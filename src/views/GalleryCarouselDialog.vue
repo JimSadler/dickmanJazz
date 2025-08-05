@@ -14,25 +14,22 @@ const dialogValue = ref(false)
 <template>
   <app-dialog-card
     id="gallery"
-    title="Gallery Carousel Dialog"
+    title="TBA Big Band "
+    :subtitle="`at ${props.image.location}`"
     v-model="dialogValue"
     width="1200"
     height="800"
   >
     <template #activator="{ props }">
-      <!--<v-img-->
-      <!--  v-bind="props"-->
-      <!--  :lazy-src="image.src"-->
-      <!--  :src="image.src"-->
-      <!--  width="100%"-->
-      <!--  cover-->
-      <!--  class="clickable-image"-->
-      <!--/>"-->
-      <img alt v-bind="props" class="clickable-image" :src="image.src" width="100%" />
+      <img :alt="image.alt" v-bind="props" class="clickable-image" :src="image.src" width="100%" />
     </template>
     <div class="pa-4">
       <v-carousel v-model="carouselIndex" hide-delimiters>
-        <v-carousel-item v-for="(img, i) in tbaBandGallery" :key="index" class="image-container">
+        <v-carousel-item
+          v-for="(img, index) in tbaBandGallery"
+          :key="index"
+          class="image-container"
+        >
           <v-img :src="img.src" cover class="image"></v-img>
         </v-carousel-item>
       </v-carousel>

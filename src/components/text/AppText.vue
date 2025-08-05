@@ -65,6 +65,7 @@ const textClass = computed(() => {
 })
 
 const textStyle = computed(() => {
+  console.log('props.text', props.text)
   let styles = {}
   if (props.lineHeight) styles.lineHeight = props.lineHeight
   return styles
